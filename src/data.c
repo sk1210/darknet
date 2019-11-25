@@ -150,7 +150,7 @@ box_label *read_boxes(char *filename, int *n)
             size = size * 2;
             boxes = realloc(boxes, size*sizeof(box_label));
         }
-        boxes[count].id = id;
+        boxes[count].id = 0;//id;
         boxes[count].x = x;
         boxes[count].y = y;
         boxes[count].h = h;
