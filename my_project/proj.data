@@ -1,4 +1,4 @@
-classes= 2
+classes= 1
 train  = my_project/train_all.txt
 valid  = my_project/train_all.txt
 names =  my_project/demo.names
