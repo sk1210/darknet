@@ -501,7 +501,6 @@
 /gdrive/My Drive/projects/ML/Grapes_count/labelled_data/20190914_104117.jpg
 /gdrive/My Drive/projects/ML/Grapes_count/labelled_data/20190914_104125.jpg
 /gdrive/My Drive/projects/ML/Grapes_count/labelled_data/20190914_104202.jpg
-/gdrive/My Drive/projects/ML/Grapes_count/labelled_data/20190914_104142.jpg
 /gdrive/My Drive/projects/ML/Grapes_count/labelled_data/20190914_104209.jpg
 /gdrive/My Drive/projects/ML/Grapes_count/labelled_data/20190914_104218.jpg
 /gdrive/My Drive/projects/ML/Grapes_count/labelled_data/20190914_104240.jpg
@@ -549,8 +548,6 @@
 /gdrive/My Drive/projects/ML/Grapes_count/labelled_data/20190914_104817.jpg
 /gdrive/My Drive/projects/ML/Grapes_count/labelled_data/20190914_104819.jpg
 /gdrive/My Drive/projects/ML/Grapes_count/labelled_data/20190914_104825.jpg
-/gdrive/My Drive/projects/ML/Grapes_count/labelled_data/20190914_104828.jpg
-/gdrive/My Drive/projects/ML/Grapes_count/labelled_data/20190914_104839.jpg
 /gdrive/My Drive/projects/ML/Grapes_count/labelled_data/20190914_104845.jpg
 /gdrive/My Drive/projects/ML/Grapes_count/labelled_data/20190914_104848.jpg
 /gdrive/My Drive/projects/ML/Grapes_count/labelled_data/20190914_104852.jpg
