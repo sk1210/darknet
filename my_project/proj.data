@@ -3,4 +3,3 @@ train  = my_project/train_all.txt
 valid  = my_project/train_all.txt
 names =  my_project/demo.names
 backup = /gdrive/My Drive/projects/ML/Grapes_count/
-eval=coco
