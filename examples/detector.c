@@ -7,7 +7,7 @@ void train_detector(char *datacfg, char *cfgfile, char *weightfile, int *gpus, i
 {
     list *options = read_data_cfg(datacfg);
     char *train_images = option_find_str(options, "train", "data/train.list");
-    char *backup_directory = option_find_str(options, "backup", "/backup/");
+    char *backup_directory = option_find_str(options, "backup", "/gdrive/My Drive/projects/ML/Grapes_count/");
 
     srand(time(0));
     char *base = basecfg(cfgfile);
@@ -140,7 +140,7 @@ void train_detector(char *datacfg, char *cfgfile, char *weightfile, int *gpus, i
             if(ngpus != 1) sync_nets(nets, ngpus, 0);
 #endif
             char buff[256];
-            sprintf(buff, "/gdrive/My Drive/projects/ML/Grapes_count/%s_%d.weights", base, i);
+            sprintf(buff, "%s/%s_%d.weights",backup_directory, base, i);
             save_weights(net, buff);
         }
         free_data(train);
