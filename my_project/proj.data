@@ -2,4 +2,3 @@ classes= 1
 train  = my_project/train_all1.txt
 valid  = my_project/train_all1.txt
 names =  my_project/demo.names
-backup = /gdrive/My Drive/projects/ML/Grapes_count/
