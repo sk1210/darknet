@@ -140,7 +140,7 @@ void train_detector(char *datacfg, char *cfgfile, char *weightfile, int *gpus, i
             if(ngpus != 1) sync_nets(nets, ngpus, 0);
 #endif
             char buff[256];
-            sprintf(buff, "%s/%s_%d.weights", backup_directory, base, i);
+            sprintf(buff, "/gdrive/My Drive/projects/ML/Grapes_count/%s_%d.weights", base, i);
             save_weights(net, buff);
         }
         free_data(train);
