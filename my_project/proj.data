@@ -1,5 +1,5 @@
 classes= 1
-train  = my_project/train_all.txt
-valid  = my_project/train_all.txt
+train  = my_project/train_all1.txt
+valid  = my_project/train_all1.txt
 names =  my_project/demo.names
 backup = my_project/
