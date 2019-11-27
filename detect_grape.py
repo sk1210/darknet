@@ -146,13 +146,14 @@ def detect(net, meta, image, thresh=.5, hier_thresh=.5, nms=.45):
     
 if __name__ == "__main__":
     img_dir = sys.argv[1]
-    imgs_name = glob.glob(img_dir + "/*.jpg")
+    imgs_name = os.listdir(img_dir)
     print(imgs_name)
     net = load_net("/content/darknet/my_project/yolov2_test.cfg".encode('utf-8'), "/gdrive/My Drive/projects/ML/Grapes_count/yolov2.backup".encode('utf-8'), 0)
     meta = load_meta("my_project/proj.data".encode('utf-8'))
     for i, img_name in enumerate(imgs_name):
         if i>10: break
-        r = detect(net, meta, "1.jpg".encode('utf-8'))
+        img_name = img_dir + "//" + img_name 
+        r = detect(net, meta, img_name.encode('utf-8'))
         num_grapes = len(r)
         print (img_name, num_grapes)
         print (r)
