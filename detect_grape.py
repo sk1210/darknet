@@ -148,7 +148,7 @@ if __name__ == "__main__":
     img_dir = sys.argv[1]
     out_dir = sys.argv[2]
     imgs_name = glob.glob(img_dir + "/*.jpg")
-    print(imgs_name)
+    print(out_dir)
     net = load_net("/content/darknet/my_project/yolov2_test.cfg".encode('utf-8'), "/gdrive/My Drive/projects/ML/Grapes_count/yolov2.backup".encode('utf-8'), 0)
     meta = load_meta("my_project/proj.data".encode('utf-8'))
     f = open("prediction.csv","w")
