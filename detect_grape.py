@@ -156,7 +156,7 @@ if __name__ == "__main__":
 #         if i>10: break
         #img_name = img_dir + "//" + img_name 
         rects = detect(net, meta, img_name.encode('utf-8'))
-        num_grapes = len(r)
+        num_grapes = len(rects)
         f.write(img_name + "," + str(num_grapes))
         print (img_name, num_grapes)
 #         print (r)
