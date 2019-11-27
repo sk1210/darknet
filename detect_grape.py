@@ -160,6 +160,7 @@ if __name__ == "__main__":
         f.write(img_name + "," + str(num_grapes))
         print (img_name, num_grapes)
         c,p,box = r
+        print (r)
         x,y,w,h = list(map(int, box))
         img = cv2.imread(img_name)
         img =  cv2.rectangle(img, (x, y), (x + w, y + h), (255,0,0), 2)
