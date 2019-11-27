@@ -150,12 +150,15 @@ if __name__ == "__main__":
     print(imgs_name)
     net = load_net("/content/darknet/my_project/yolov2_test.cfg".encode('utf-8'), "/gdrive/My Drive/projects/ML/Grapes_count/yolov2.backup".encode('utf-8'), 0)
     meta = load_meta("my_project/proj.data".encode('utf-8'))
+    f = open("prediction.csv","w")
     for i, img_name in enumerate(imgs_name):
-        if i>10: break
+#         if i>10: break
         #img_name = img_dir + "//" + img_name 
         r = detect(net, meta, img_name.encode('utf-8'))
         num_grapes = len(r)
+        f.write(img_name + "," + num_grapes)
         print (img_name, num_grapes)
-        print (r)
+        #print (r)
+    f.close()
     
 
