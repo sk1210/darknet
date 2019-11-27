@@ -159,6 +159,7 @@ if __name__ == "__main__":
         num_grapes = len(r)
         f.write(img_name + "," + str(num_grapes))
         print (img_name, num_grapes)
+        print (r)
         c,p,box = r
         print (r)
         x,y,w,h = list(map(int, box))
