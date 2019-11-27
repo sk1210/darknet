@@ -1,6 +1,8 @@
 from ctypes import *
 import math
 import random
+import sys
+import glob
 
 def sample(probs):
     s = sum(probs)
@@ -143,14 +145,16 @@ def detect(net, meta, image, thresh=.5, hier_thresh=.5, nms=.45):
     return res
     
 if __name__ == "__main__":
-    #net = load_net("cfg/densenet201.cfg", "/home/pjreddie/trained/densenet201.weights", 0)
-    #im = load_image("data/wolf.jpg", 0, 0)
-    #meta = load_meta("cfg/imagenet1k.data")
-    #r = classify(net, meta, im)
-    #print r[:10]
+    img_dir = sys.argv[1]
+    imgs_name = glob.glob(img_dir + "/*jpg")
+    
     net = load_net("/content/darknet/my_project/yolov2_test.cfg".encode('utf-8'), "/gdrive/My Drive/projects/ML/Grapes_count/yolov2.backup".encode('utf-8'), 0)
     meta = load_meta("my_project/proj.data".encode('utf-8'))
-    r = detect(net, meta, "1.jpg".encode('utf-8'))
-    print (r)
+    for i, img_name in enumerate(imgs_name):
+        if i>10: break
+        r = detect(net, meta, "1.jpg".encode('utf-8'))
+        num_grapes = len(r)
+        print (img_name, num_grapes)
+        print (r)
     
 
