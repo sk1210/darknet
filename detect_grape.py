@@ -170,6 +170,8 @@ if __name__ == "__main__":
             y -= h//2
             
             img =  cv2.rectangle(img, (x, y), (x + w, y + h), (255,0,0), 2)
+        font = cv2.FONT_HERSHEY_SIMPLEX
+        cv2.putText(img, "Total :" + str(num_grapes) , (100,100), font, 3, (0, 255, 0), 2, cv2.LINE_AA)
         cv2.imwrite(out_dir+ os.path.basename(img_name), img)
                     
     f.close()
