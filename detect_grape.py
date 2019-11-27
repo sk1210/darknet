@@ -3,7 +3,7 @@ import math
 import random
 import sys
 import glob
-
+import os
 def sample(probs):
     s = sum(probs)
     probs = [a/s for a in probs]
