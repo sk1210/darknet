@@ -156,7 +156,7 @@ if __name__ == "__main__":
         #img_name = img_dir + "//" + img_name 
         r = detect(net, meta, img_name.encode('utf-8'))
         num_grapes = len(r)
-        f.write(img_name + "," + num_grapes)
+        f.write(img_name + "," + str(num_grapes))
         print (img_name, num_grapes)
         #print (r)
     f.close()
