@@ -163,11 +163,11 @@ if __name__ == "__main__":
 #         print (r)
         for rect in rects:
             c,p,box = rect
-            #print (r)
+            print (box)
             x,y,w,h = list(map(int, box))
             img = cv2.imread(img_name)
             img =  cv2.rectangle(img, (x, y), (x + w, y + h), (255,0,0), 2)
-            cv2.imwrite(out_dir+ os.path.basename(img_name), img)
+        cv2.imwrite(out_dir+ os.path.basename(img_name), img)
                     
     f.close()
     
