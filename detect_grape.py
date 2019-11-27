@@ -161,11 +161,12 @@ if __name__ == "__main__":
         f.write(img_name + "," + str(num_grapes))
         print (img_name, num_grapes)
 #         print (r)
+        img = cv2.imread(img_name)
         for rect in rects:
             c,p,box = rect
-            print (box)
+            #print (box)
             x,y,w,h = list(map(int, box))
-            img = cv2.imread(img_name)
+            
             img =  cv2.rectangle(img, (x, y), (x + w, y + h), (255,0,0), 2)
         cv2.imwrite(out_dir+ os.path.basename(img_name), img)
                     
