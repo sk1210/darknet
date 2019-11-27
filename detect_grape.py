@@ -162,7 +162,7 @@ if __name__ == "__main__":
         c,p,box = r
         x,y,w,h = list(map(int, box))
         img = cv2.imread(img_name)
-        img =  cv2.rectangle(img, (x, y), (x + w, y + h), (255,0,0) 2)
+        img =  cv2.rectangle(img, (x, y), (x + w, y + h), (255,0,0), 2)
         cv2.imwrite(out_dir+ os.path.basename(img_name), img)
                     
     f.close()
