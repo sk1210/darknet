@@ -146,6 +146,7 @@ def detect(net, meta, image, thresh=.5, hier_thresh=.5, nms=.45):
     
 if __name__ == "__main__":
     img_dir = sys.argv[1]
+    out_dir = sys.argv[2]
     imgs_name = glob.glob(img_dir + "/*.jpg")
     print(imgs_name)
     net = load_net("/content/darknet/my_project/yolov2_test.cfg".encode('utf-8'), "/gdrive/My Drive/projects/ML/Grapes_count/yolov2.backup".encode('utf-8'), 0)
@@ -158,7 +159,12 @@ if __name__ == "__main__":
         num_grapes = len(r)
         f.write(img_name + "," + str(num_grapes))
         print (img_name, num_grapes)
-        #print (r)
+        c,p,box = r
+        x,y,w,h = list(map(int, box))
+        img = cv2.imread(img_name)
+        img =  cv2.rectangle(img, (x, y), (x + w, y + h), (255,0,0) 2)
+        cv2.imwrite(out_dir+ os.path.basename(img_name), img)
+                    
     f.close()
     
 
