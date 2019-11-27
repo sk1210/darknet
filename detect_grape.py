@@ -166,6 +166,8 @@ if __name__ == "__main__":
             c,p,box = rect
             #print (box)
             x,y,w,h = list(map(int, box))
+            x -= w//2
+            y -= h//2
             
             img =  cv2.rectangle(img, (x, y), (x + w, y + h), (255,0,0), 2)
         cv2.imwrite(out_dir+ os.path.basename(img_name), img)
